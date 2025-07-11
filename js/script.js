@@ -52,17 +52,18 @@ function renderTodos() {
         day: 'numeric', month: 'long', year: 'numeric',
         hour: '2-digit', minute: '2-digit'
       });
+      
+    li.innerHTML = `
+      <div class="content">
+        <strong>${todo.text}</strong>
+        <small>🗓️ Tenggat: ${formattedDate}</small>
+      </div>
+      <div class="actions">
+        <button onclick="toggleTodo(${index})" title="Tandai selesai">✔️</button>
+        <button onclick="deleteTodo(${index})" title="Hapus tugas">🗑️</button>
+      </div>
+    `;
 
-      li.innerHTML = `
-        <div>
-          <strong>${todo.text}</strong><br/>
-          <small>📅 Tenggat: ${formattedDate}</small>
-        </div>
-        <div>
-          <button onclick="toggleTodo(${index})" title="Tandai selesai">✔️</button>
-          <button onclick="deleteTodo(${index})" title="Hapus tugas">🗑️</button>
-        </div>
-      `;
       todoList.appendChild(li);
     });
 

@@ -1,6 +1,6 @@
 body {
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  background: linear-gradient(to right, #f0f4f8, #e2ebf0);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -12,87 +12,95 @@ body {
   background: white;
   padding: 30px;
   border-radius: 12px;
-  width: 350px;
+  width: 360px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
 }
 
-.container:hover {
-  transform: scale(1.02);
-}
-
-.input-group, .filter-group {
-  margin-top: 15px;
-  display: flex;
-  gap: 10px;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
-input, select, button {
+.input-group input, .input-group button {
   padding: 10px;
+  font-size: 14px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  flex: 1;
-  font-size: 14px;
 }
 
-button {
+.input-group button {
   background-color: #48bb78;
   color: white;
-  border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
+.input-group button:hover {
   background-color: #38a169;
 }
 
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-group select {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.completed .content strong {
+  text-decoration: line-through;
+  color: #a0aec0;
+  transition: all 0.4s ease;
+}
+
 ul {
-  margin-top: 20px;
   list-style: none;
   padding: 0;
+}
+
+li {
+  background: #f7fafc;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.4s ease, opacity 0.4s ease;
 }
 
 li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f7fafc;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
 }
 
-li:hover {
-  transform: translateX(4px);
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
 }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
+.actions {
+  display: flex;
+  gap: 5px;
 }
 
-.completed {
-  background-color: #e6fffa;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
-}
-
-.completed span {
-  text-decoration: line-through;
-  font-style: italic;
-  color: #718096;
-  opacity: 0.7;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+li .content {
+  display: flex;
 }
