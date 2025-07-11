@@ -46,7 +46,7 @@ function renderTodos() {
     )
     .forEach((todo, index) => {
       const li = document.createElement('li');
-      li.classList.add('fade-in');
+      if (todo.completed) li.classList.add('completed');
 
       const formattedDate = new Date(todo.date).toLocaleString('id-ID', {
         day: 'numeric', month: 'long', year: 'numeric',
@@ -66,12 +66,7 @@ function renderTodos() {
 
       todoList.appendChild(li);
     });
-
-    li.classList.add('fade-in');
-    if (todo.completed) {
-      li.classList.add('completed'); // Tambahkan class ini
-      }
-}
+  }
 
 // Event listener untuk filter
 filter.addEventListener('change', renderTodos);

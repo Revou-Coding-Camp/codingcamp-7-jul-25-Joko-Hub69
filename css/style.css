@@ -2,13 +2,14 @@ body {
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(to right, #f0f4f8, #e2ebf0);
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
   min-height: 100vh;
   padding-top: 50px;
 }
 
 .container {
+  flex: 1;
+  margin: 50px auto;
   background: white;
   padding: 30px;
   border-radius: 12px;
@@ -103,4 +104,12 @@ li {
 
 li .content {
   display: flex;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px 0;
+  color: #4a5568;
+  font-size: 14px;
 }
