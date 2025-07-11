@@ -80,6 +80,18 @@ li:hover {
   animation: fadeIn 0.5s ease-in;
 }
 
+.completed {
+  background-color: #e6fffa;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.completed span {
+  text-decoration: line-through;
+  font-style: italic;
+  color: #718096;
+  opacity: 0.7;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

@@ -65,6 +65,11 @@ function renderTodos() {
       `;
       todoList.appendChild(li);
     });
+
+    li.classList.add('fade-in');
+    if (todo.completed) {
+      li.classList.add('completed'); // Tambahkan class ini
+      }
 }
 
 // Event listener untuk filter
