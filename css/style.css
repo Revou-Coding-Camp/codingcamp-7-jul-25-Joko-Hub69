@@ -27,6 +27,13 @@ body {
   gap: 10px;
 }
 
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
 input, select, button {
   padding: 10px;
   border-radius: 6px;
